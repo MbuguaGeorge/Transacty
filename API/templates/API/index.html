@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transacty</title>
+    </head>
+<body>
+    <div>
+        {% if qr %}
+        {% for code in qr %}
+        {{code.name}}
+        <img src={{code.qr_code.url}} />
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
